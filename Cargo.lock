@@ -4563,6 +4563,7 @@ dependencies = [
  "iggy_binary_protocol",
  "keyring",
  "passterm",
+ "secrecy",
  "thiserror 2.0.18",
  "tokio",
  "tracing",
