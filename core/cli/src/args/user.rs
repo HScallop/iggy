@@ -21,6 +21,7 @@ use crate::args::permissions::UserStatusArg;
 use crate::args::permissions::stream::StreamPermissionsArg;
 use clap::{Args, Subcommand};
 use iggy::prelude::Identifier;
+use secrecy::SecretString;
 
 use super::permissions::global::GlobalPermissionsArg;
 
@@ -114,7 +115,7 @@ pub(crate) struct UserCreateArgs {
     ///
     /// Password of the user, must be between 3 and 100 characters long.
     #[clap(verbatim_doc_comment)]
-    pub(crate) password: String,
+    pub(crate) password: SecretString,
     /// User status
     #[clap(short, long)]
     #[arg(value_enum, default_value_t = UserStatusArg::default())]

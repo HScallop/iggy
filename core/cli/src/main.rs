@@ -203,7 +203,7 @@ fn get_command(
         Command::User(command) => match command {
             UserAction::Create(create_args) => Box::new(CreateUserCmd::new(
                 create_args.username.clone(),
-                create_args.password.clone(),
+                create_args.password,
                 create_args.user_status.clone().into(),
                 PermissionsArgs::new(
                     create_args.global_permissions.clone(),
