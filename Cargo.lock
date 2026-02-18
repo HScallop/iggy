@@ -4669,6 +4669,7 @@ dependencies = [
  "iggy_common",
  "keyring",
  "passterm",
+ "secrecy",
  "serde",
  "serde_json",
  "tokio",
